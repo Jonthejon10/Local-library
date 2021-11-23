@@ -11,10 +11,6 @@ let AuthorSchema = new Schema(
     }
 )
 
-AuthorSchema
-    .virtual('name')
-    .get(() => this.family_name + ', ' + this.first_name)
-
 AuthorSchema.virtual('lifespan').get(() => {
     let lifetime_string = ''
 
